@@ -1,0 +1,113 @@
+:root{
+  --senja : rgba(0,12,123,100);
+  --darkGreenBg : #1A4716;
+  --greenBg : #4C713D;
+  --orangeAccent : #F7604F;
+  --peachDust : #ffd6a5;
+  --deepForest : #1C3B2D;
+  --pineGreen : #3A6B47;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Sans-serif;
+}
+
+body{
+  background: linear-gradient(to bottom, #FF914D, #FF6F61, #FFD6A5);
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.box0{
+  background-color: var(--darkgreenBg);
+  height: 100vh;
+  margin: 5%;
+}
+
+.box1Nav{
+  background-color: var(--peachDust);
+  height: 20%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*shadow black*/
+  /*box-shadow: 0 4px 8px rgba(0,0,0,0.5);*/
+  /*glowing*/
+  /*box-shadow: 0 0 20px 5px rgba(255,182,193,0.7);*/
+  /* sunset orange glow */
+  /* box-shadow: 0 6px 1px rgba(35, 35, 35, 0.2); */
+  box-shadow: 0 6px 1px color-mix(in srgb, var(--peachDust), rgb(188, 10, 10) 30%);
+  
+}
+.box1Body{
+  margin-top: 5%;
+  background-color:  var(--deepForest);
+  height: 50%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 1px color-mix(in srgb, var(--darkGreenBg), rgb(29, 12, 12) 30%);
+}
+
+.box1NavH2{
+  color: var(--deepForest);
+  
+}
+
+.box1BodyH2{
+  color: var(--peachDust);
+}
+.btnbox1Body{
+  margin-top: 5%;
+  border-style: none;
+  height: 60px;
+  width :160px;
+  border-radius: 5px;
+  box-shadow: 0 6px 1px color-mix(in srgb, var(--peachDust), rgb(244, 12, 12) 30%);
+  background-color: var(--peachDust);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnbox1Body:hover{
+  background-color: #ffffff;
+}
+
+.btnbox1Body:active{
+ transform: translate(0, 5px);
+ box-shadow: 0 0 0 var(--orangeAccent );
+}
+
+.boxDrop{
+  position: relative;
+  background-color: var(--pineGreen) ;
+  border-radius: 5px;
+  height: 60px;
+  width :160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  box-shadow: 0 6px 1px color-mix(in srgb, var(--pineGreen), rgb(29, 12, 12) 30%);
+  transition: background-color 0.3s ease;
+  
+
+}
+
+.boxDrop:hover{
+  background-color: #82b08c;
+}
+
+.boxDrop:active{
+  background-color: #82b08c;
+  transform: translate(0, 5px);
+  box-shadow: 0 0 0 ;
+}
+
+
