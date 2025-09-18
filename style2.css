@@ -1,0 +1,72 @@
+:root{
+    --gradientBG2 : linear-gradient(to bottom,#181116, #020203, #06060a);
+    --placeholderBG: #383b3e;
+    --candleBody : antiquewhite;
+    --fireGradient: linear-gradient(to bottom,#fff7c3, #fd9259, #ff2525);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Sans-serif;
+}
+
+.box0{
+    background-color: aliceblue;
+    display: flex;
+
+}
+
+
+.body{
+    background: var(--gradientBG2);
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.placeholder{
+    transform: scale(0.8);
+    --vw: 100vw;
+    --vh: 100vh;
+    --placeholderWidth: 80px;
+    --placeholderHeight: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    background-color: var(--placeholderBG);
+    height: var(--placeholderHeight);
+    width: var(--placeholderWidth);
+    top: calc((var(--vh) / 2) - calc(var(--placeholderHeight)/2));
+    left: calc((var(--vw) / 2) - calc(var(--placeholderWidth)/2));
+}
+
+.fire{
+    z-index: 2;
+    position: relative;
+    background-color: #fff7c3;
+    height: 30px;
+    width: 30px;
+    top: -10px;
+    transform: rotateZ(45deg);
+}
+.wick{
+    z-index: -1;
+    position: relative;
+    background-color: #020203;
+    height: 10px;
+    width: 5px;
+    top: -5px;
+}
+
+.candle{
+    z-index: 0;
+    position: relative;
+    background-color: var(--candleBody);
+    height: 100px;
+    width: 40px;
+    top: -10px;
+    border-radius: 10px;
+}
