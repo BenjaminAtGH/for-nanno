@@ -28,10 +28,8 @@
 
 .placeholder{
     transform: scale(0.8);
-    --vw: 100vw;
-    --vh: 100vh;
     --placeholderWidth: 80px;
-    --placeholderHeight: 140px;
+    --placeholderHeight: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,34 +37,38 @@
     background-color: var(--placeholderBG);
     height: var(--placeholderHeight);
     width: var(--placeholderWidth);
-    top: calc((var(--vh) / 2) - calc(var(--placeholderHeight)/2));
-    left: calc((var(--vw) / 2) - calc(var(--placeholderWidth)/2));
-}
-
-.fire{
-    z-index: 2;
-    position: relative;
-    background-color: #fff7c3;
-    height: 30px;
-    width: 30px;
-    top: -10px;
-    transform: rotateZ(45deg);
-}
-.wick{
-    z-index: -1;
-    position: relative;
-    background-color: #020203;
-    height: 10px;
-    width: 5px;
-    top: -5px;
+    inset: 0;
+    margin: auto;
 }
 
 .candle{
-    z-index: 0;
-    position: relative;
-    background-color: var(--candleBody);
-    height: 100px;
-    width: 40px;
-    top: -10px;
-    border-radius: 10px;
+    width: 90%;
+    height: 100%;
+    background-image: url("images/sprites/candle.png");
+    background-repeat: no-repeat;
+
+    /* background-position: -1px -199px; */
+    /* background-position: -0.5px -450px; */
+    /* background-position: -90px -450px; */
+    /* background-position: -179.5px -450px; */
+
+    
+    
+    background-size: 1000px;
+    animation: burn 0.2s steps(1) infinite alternate-reverse both;
+    
+}
+
+@keyframes burn{
+    0%{
+        background-position: -0.5px -450px;
+    }
+    50%{
+        background-position: -90px -450px; 
+    }
+    100%{
+        background-position: -179.5px -450px;;
+    }
+
+
 }
